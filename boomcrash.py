@@ -113,7 +113,7 @@ df.loc[df['ha_close'] < df['ha_open'], 'ha_color'] = -1
 df['signal'] = ''
 buy_cond = (df['trend'] == 1) & (df['momentum'] == 1) & (df['ha_color'] == 1) & (df['rsi_signal'] >= 0)
 sell_cond = (df['trend'] == -1) & (df['momentum'] == -1) & (df['ha_color'] == -1) & (df['rsi_signal'] <= 0)
-dfdf.loc[buy_cond, 'signal'] = 'BUY'
+df.loc[buy_cond, 'signal'] = 'BUY'
 df.loc[sell_cond, 'signal'] = 'SELL'
 
 # Display controls
